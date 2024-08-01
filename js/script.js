@@ -2,6 +2,8 @@
 console.log('JS ok');
 
 //* Recupero elementi interessati dal DOM
+const firstName = document.getElementById('firstName')
+const lastName = document.getElementById('lastName')
 const calculateButton = document.getElementById('calculateButton');
 const resultElement = document.getElementById('result')
 const ticketSection = document.getElementById('ticketSection');
@@ -79,13 +81,19 @@ calculateButton.addEventListener('click', function (e) {
 
         // Aggiungo un evento al nuovo bottone
         newButton.addEventListener('click', function () {
+
             // Genero un numero di carrozza casuale tra 1 e 20
             const carriageNumber = Math.floor(Math.random() * 20) + 1;
             // Genero un codice passeggero casuale che inizia con 9 e ha 5 cifre
             const passengerCode = '9' + Math.floor(1000 + Math.random() * 9000);
 
+            // Recupero i valori del nome e del cognome
+            const passengerFirstName = firstName.value;
+            const passengerLastName = lastName.value;
+
             // Mostro la sezione del biglietto
             ticketSection.style.display = 'block';
+            resultElement.innerHTML += `<br>Nome: ${passengerFirstName} ${passengerLastName}`;
             carriageNumberElement.innerText = `Numero Carrozza: ${carriageNumber}`;
             passengerCodeElement.innerText = `Codice Passeggero: ${passengerCode}`;
         })

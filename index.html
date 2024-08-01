@@ -22,6 +22,12 @@
                     <img src="img/biglietto.jpg" class="card-img-top" alt="#">
                     <div class="card-body bg-secondary-subtle ">
                         <form id="ticketForm">
+                            <label for="firstName">Come ti chiami?</label>
+                            <input type="texh" id="firstName" name="firstName" required>
+                            <br>
+                            <label for="lastName">Qual'è il tuo cognome?</label>
+                            <input type="text" id="lastName" name="lastName" required>
+                            <br>
                             <label for="kmInput">Quanti kilometri dovrai percorrere?</label>
                             <input type="number" id="kmInput" name="kmInput" min="0" required>
                             <br>
@@ -38,7 +44,7 @@
                             <button type="reset" class="btn btn-danger">Reset</button>
                         </form>
                         <br>
-                        <p id="result" class="fs-10 fw-semibold"></p>
+                        <p id="result" class="fs-10"></p>
                         <div id="ticketSection" class="mt-2">
                             <p id="carriageNumber"></p>
                             <p id="passengerCode"></p>
