@@ -4,7 +4,6 @@ console.log('JS ok');
 //* Recupero elementi interessati dal DOM
 const calculateButton = document.getElementById('calculateButton');
 const resultElement = document.getElementById('result')
-console.log('Click', calculateButton);
 
 //* Alert di benvenuto
 alert('Benvenuto, ti chiederemo dei dati per creare il tuo biglietto');
@@ -24,7 +23,7 @@ calculateButton.addEventListener('click', function (e) {
 
     //? FASE DI ELABORAZIONE
     //! validation
-    if (isNaN(kmNeeded) || kmNeeded < 0) {
+    if (isNaN(kmNeeded) || kmNeeded < 1) {
         alert('Inserisci un numero valido di kilometri');
     } else {
         //* Calcolo del prezzo base del biglietto per km
