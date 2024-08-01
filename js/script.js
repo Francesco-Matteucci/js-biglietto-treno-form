@@ -78,7 +78,7 @@ calculateButton.addEventListener('click', function (e) {
         resultElement.appendChild(newButton);
 
         // Aggiungo un evento al nuovo bottone
-        newButton.addEventListener('click', () => {
+        newButton.addEventListener('click', function () {
             // Genero un numero di carrozza casuale tra 1 e 20
             const carriageNumber = Math.floor(Math.random() * 20) + 1;
             // Genero un codice passeggero casuale che inizia con 9 e ha 5 cifre
