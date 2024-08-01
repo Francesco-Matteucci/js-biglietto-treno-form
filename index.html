@@ -18,8 +18,12 @@
         <label for="kmInput">Quanti kilometri dovrai percorrere?</label>
         <input type="number" id="kmInput" name="kmInput" min="0" required>
         <br>
-        <label for="ageInput">Quanti anni hai?</label>
-        <input type="number" id="ageInput" name="ageInput" min="0" required>
+        <label for="ageCategory">Seleziona la tua fascia d'età:</label>
+        <select id="ageCategory" name="ageCategory" required>
+            <option value="minorenne">Minorenne (sotto i 18 anni)</option>
+            <option value="maggiorenne">Maggiorenne (18-64 anni)</option>
+            <option value="over65">Over 65</option>
+        </select>
         <br>
         <button id="calculateButton" type="button">Calcola il prezzo del biglietto</button>
     </form>
